@@ -1,8 +1,16 @@
 import { User } from './models/User';
 
-const user = new User({ name: 'marcola', age: 19 });
+// Initialize an empty User
+const user = new User({});
 
-user.set({ name: 'jumentin', age: 32 });
-const userData = user.get('name');
+console.log(user);
+
+// Set user information later on
+user.set({ name: 'Mariola' });
+user.set({ age: 19 });
+const userName = user.get('name');
+const userAge = user.get('age');
+
+const userData = { name: userName, age: userAge };
 
 console.log(userData);
